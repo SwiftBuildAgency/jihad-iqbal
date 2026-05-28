@@ -132,7 +132,7 @@ if (contactForm) {
       contactForm.reset();
       formStatus?.classList.add("is-success");
       if (formStatus) {
-        formStatus.textContent = "Sent. I’ll reply from bilal@swiftbuild.agency.";
+        formStatus.textContent = "JazakAllah khair. Sent. I’ll reply from bilal@swiftbuild.agency.";
       }
     } catch (error) {
       formStatus?.classList.add("is-error");
