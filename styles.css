@@ -829,9 +829,9 @@ p {
   }
 
   .frame-copy {
-    left: calc(50% + 24px);
-    bottom: 84px;
-    width: calc(100% - 108px);
+    left: 50%;
+    bottom: 116px;
+    width: calc(100% - 56px);
     min-height: 0;
   }
 
@@ -843,21 +843,55 @@ p {
   }
 
   .story-index {
-    left: 10px;
-    gap: 8px;
-    padding: 10px 0;
-    background: linear-gradient(90deg, rgba(5, 9, 20, 0.58), rgba(5, 9, 20, 0.18), transparent);
+    top: auto;
+    left: 50%;
+    bottom: 72px;
+    display: flex;
+    width: min(258px, calc(100% - 84px));
+    justify-content: space-between;
+    gap: 0;
+    padding: 7px 10px;
+    border: 1px solid rgba(248, 251, 255, 0.1);
+    border-radius: 999px;
+    background: rgba(5, 9, 20, 0.66);
+    box-shadow: 0 16px 42px rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(10px);
+    transform: translateX(-50%);
   }
 
   .story-index a {
-    min-width: 48px;
-    padding-left: 9px;
-    font-size: 0.47rem;
-    letter-spacing: 0.035em;
+    display: grid;
+    width: 22px;
+    min-width: 22px;
+    height: 18px;
+    place-items: center;
+    padding-left: 0;
+    overflow: hidden;
+    color: rgba(248, 251, 255, 0.38);
+    font-size: 0;
+    line-height: 1;
+  }
+
+  .story-index a::before {
+    position: static;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    transform: none;
+  }
+
+  .story-index a[aria-current] {
+    color: var(--gold);
   }
 
   .story-index a[aria-current]::after {
-    height: 22px;
+    top: auto;
+    bottom: -2px;
+    left: 50%;
+    width: 18px;
+    height: 2px;
+    border-radius: 999px;
+    transform: translateX(-50%);
   }
 
   .eyebrow {
