@@ -796,61 +796,157 @@ p {
     height: 640vh;
   }
 
+  .stage-header {
+    top: 22px;
+    left: 26px;
+    right: 26px;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
   .brand-mark img {
-    width: 126px;
+    width: 112px;
   }
 
   .recipient-line {
-    max-width: 168px;
-    font-size: 0.56rem;
+    max-width: 148px;
+  }
+
+  .recipient-line span {
+    font-size: 0.72rem;
+    line-height: 1.12;
+  }
+
+  .recipient-line strong {
+    margin-top: 5px;
+    font-size: 0.48rem;
   }
 
   .artifact {
-    top: 27%;
-    width: min(88vw, 410px);
+    top: 25%;
+    width: min(82vw, 380px);
+    opacity: 0.36;
   }
 
   .frame-copy {
-    left: calc(50% + 18px);
-    bottom: 78px;
-    width: calc(100% - 92px);
-    min-height: 390px;
+    left: calc(50% + 24px);
+    bottom: 84px;
+    width: calc(100% - 108px);
+    min-height: 0;
+  }
+
+  .story-frame {
+    filter: none;
+    transition:
+      opacity 160ms ease,
+      transform 220ms cubic-bezier(0.22, 1, 0.36, 1);
   }
 
   .story-index {
-    left: 14px;
-    gap: 9px;
+    left: 10px;
+    gap: 8px;
+    padding: 10px 0;
+    background: linear-gradient(90deg, rgba(5, 9, 20, 0.58), rgba(5, 9, 20, 0.18), transparent);
   }
 
   .story-index a {
-    min-width: 54px;
-    padding-left: 10px;
-    font-size: 0.52rem;
+    min-width: 48px;
+    padding-left: 9px;
+    font-size: 0.47rem;
+    letter-spacing: 0.035em;
   }
 
   .story-index a[aria-current]::after {
-    height: 25px;
+    height: 22px;
+  }
+
+  .eyebrow {
+    margin-bottom: 10px;
+    font-size: 0.62rem;
+    letter-spacing: 0.06em;
   }
 
   h1,
   h2 {
-    margin-bottom: 16px;
-    font-size: clamp(2.7rem, 16vw, 4.4rem);
-    line-height: 0.9;
+    margin-bottom: 12px;
+    font-size: clamp(2.05rem, 10.4vw, 3rem);
+    line-height: 0.94;
+  }
+
+  #product h2,
+  #ask h2 {
+    font-size: clamp(1.82rem, 8.8vw, 2.55rem);
+    line-height: 0.98;
   }
 
   p {
-    font-size: 0.96rem;
-    line-height: 1.5;
+    max-width: 100%;
+    font-size: 0.86rem;
+    line-height: 1.42;
   }
 
   .story-frame strong {
-    font-size: 1rem;
+    font-size: 0.92rem;
+    line-height: 1.36;
   }
 
   .stage-cta {
     width: 100%;
+    min-height: 48px;
+    padding: 0 10px;
+    font-size: 0.9rem;
     text-align: center;
+  }
+
+  .contact-modal {
+    padding: 16px;
+  }
+
+  .modal-panel {
+    max-height: calc(100svh - 32px);
+    padding: 20px;
+  }
+
+  .modal-close {
+    top: 12px;
+    right: 12px;
+    width: 34px;
+    height: 34px;
+  }
+
+  .modal-close::before,
+  .modal-close::after {
+    top: 16px;
+    left: 9px;
+  }
+
+  .modal-panel h2 {
+    max-width: calc(100% - 38px);
+    margin-bottom: 12px;
+    font-size: clamp(1.72rem, 8.4vw, 2.15rem);
+    line-height: 0.96;
+  }
+
+  .modal-panel p {
+    font-size: 0.84rem;
+    line-height: 1.38;
+  }
+
+  .modal-form {
+    gap: 8px;
+    margin-top: 14px;
+  }
+
+  .modal-form input {
+    min-height: 40px;
+  }
+
+  .modal-form textarea {
+    min-height: 76px;
+  }
+
+  .modal-submit {
+    min-height: 44px;
   }
 
   .stage-footer {
